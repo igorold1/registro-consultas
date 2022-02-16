@@ -1,0 +1,7 @@
+{
+  "name": "medpac-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

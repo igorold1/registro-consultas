@@ -1,0 +1,38 @@
+<ion-header color="primary">
+  <ion-toolbar color="primary">
+    <ion-title>Médico</ion-title>
+    <ion-button (click) ="logout()" slot="end">Logout</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Nome do paciente:</ion-label>
+      <ion-input type="text" [(ngModel)]="nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Descrição da consulta:</ion-label>
+      <ion-input type="text" [(ngModel)]="descricao"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Data e hora:</ion-label>
+      <ion-datetime [(ngModel)]="data"
+        displayFormat="DD-MMM-YYYY HH:mm"
+        monthShortNames="jan, fev, mar, abr, mai, jun, jul, ago, set, out, nov, dez">
+      </ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Identificação do Médico:</ion-label>
+      <ion-input type="text" [(ngModel)]="idmed"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Status</ion-label>
+      
+      <ion-select oktext="Ok" cancelText="Cancelar" [(ngModel)]="confir">
+        <ion-select-option type="text" *ngFor="let item of status" value="{{item}}">{{item}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button (click)="salvar()">Salvar</ion-button>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,24 @@
+<ion-header color="primary">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Registro de consultas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <p></p>
+  <p></p>
+  <p>
+  <ion-label for="txEmail" >Insira os seus dados</ion-label>
+  <ion-input typr="email" [(ngModel)]="email" placeholder="Email"></ion-input>
+  </p>
+
+  <p>
+    <ion-input type="password" [(ngModel)]="senha" placeholder="Senha"></ion-input>
+  </p>
+
+  <p>
+    <ion-button (click)="autenticar()">Enviar</ion-button>
+  </p>
+</ion-content>
